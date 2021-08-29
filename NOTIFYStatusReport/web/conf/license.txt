@@ -1,0 +1,10 @@
+client=ARIVATO GmbH
+ELO-version=Professional
+ERP-system=--
+license-type=10 Profiles
+product=DOKinform NOTIFYagent for ELO
+ELO-key=ARIVATO GmbH
+expiration-date=Fri Dec 31 00:00:00 CET 2100
+bytes2=feff826a7a57d5c637aa29c029b21fa9082a53b0
+bytes1=852f22dd109049399acbda2780a1196cee1f3c74
+

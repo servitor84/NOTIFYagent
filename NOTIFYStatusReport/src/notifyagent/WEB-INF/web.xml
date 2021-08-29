@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <description>DOKinform NOTIFYagent by Arivato GmbH</description>
+    <display-name>DOKinform NOTIFYagent</display-name>
+    
+    
+    <servlet>
+        <description>Starts and stops the service</description>
+        <servlet-name>AgentServlet</servlet-name>
+        <servlet-class>de.arivato.notifyagent.web.AgentServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!--
+    <servlet-mapping>
+        <servlet-name>AgentServlet</servlet-name>
+        <url-pattern>/NOTIFYStatusReport</url-pattern>
+    </servlet-mapping>
+    -->
+    <servlet>
+        <description>JSF servlet for the subscription handling</description>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.faces</url-pattern>
+    </servlet-mapping>
+   <!--  <servlet>
+        <servlet-name>SubscriptionServlet</servlet-name>
+        <servlet-class>de.arivato.notifyagent.subscription.app.SubscriptionServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet> -->
+    
+   <!--  <servlet-mapping>
+        <servlet-name>SubscriptionServlet</servlet-name>
+        <url-pattern>/subscription/SubscriptionServlet</url-pattern>
+    </servlet-mapping> -->
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <filter>
+        <filter-name>SessionTimeoutFilter</filter-name>
+        <filter-class>de.arivato.notifyagent.subscription.session.SessionTimeoutFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SessionTimeoutFilter</filter-name>
+        <servlet-name>Faces Servlet</servlet-name>
+    </filter-mapping>
+</web-app>

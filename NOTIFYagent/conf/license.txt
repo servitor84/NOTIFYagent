@@ -1,0 +1,9 @@
+client=presentation license
+ELO-version=Professional
+ERP-system=--
+license-type=10 profiles (ARIVATO GmbH intern)
+product=DOKinform NOTIFYagent for ELO
+ELO-key=presentation license
+expiration-date=Fri Dec 31 00:00:00 CET 2100
+bytes2=6f7235b9179ba8a12ce39d97e2cf6d67947aae4c
+bytes1=c34366bcb048828e57b1f34efe02d5ca585305ed

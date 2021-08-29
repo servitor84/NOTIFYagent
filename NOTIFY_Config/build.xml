@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NOTIFY_Config" default="default" basedir=".">
+    <description>Builds, tests, and runs the project NOTIFY_Config.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <property file="build.properties" />
+    
+    <target name="-post-init">
+         
+        <property file="version.properties" />
+        <propertyfile file="${product.file.version}">
+            <entry key="app.version" value="${application.version.major}.${application.version.minor}"
+                      default="${application.version.major}.${application.version.minor}"/>
+           <entry key="app.product_name" value="${application.product.name}" />
+            <entry key="app.build" value="${application.version.build}" />
+        </propertyfile>
+        <propertyfile file="${productContract.file.version}">
+            <entry key="app.version" value="${application.version.major}.${application.version.minor}"
+                      default="${application.version.major}.${application.version.minor}"/>
+           <!-- <entry key="app.product_name" value="${application.product.name}" /> -->
+            <entry key="app.build" value="${application.version.build}" />
+        </propertyfile>
+    </target>
+    
+    <target name="-post-jar">
+        <propertyfile file="version.properties">
+            <entry key="application.version.build" type="int" operation="+" default="01001" pattern="00000"/>
+        </propertyfile>  
+        <property file="${product.file.version}" />
+        <exec executable="${versioninfo.location}">
+            <arg value = "${basedir}"/>
+            <arg value = "${ant.project.name}"/>
+            <arg value = "${app.version}"/>
+        </exec>
+        <!-- create a duplicate of the war file -->
+<!--        <copy file="${basedir}/dist/${ant.project.name}.jar" tofile="${product.dir.deployContract}/CM_Config.jar"/>-->
+        <jar destfile="${product.dir.deployContract}/CM_Config.jar" basedir="${dir.build.classes}" excludes="notify/**" update="true">
+            <fileset file="${basedir}/CM_Config_version.txt" />
+            <fileset dir="${basedir}/src/contractmanager" />
+        </jar>
+        
+        <jar destfile="${basedir}/dist/${ant.project.name}.jar" basedir="${dir.build.classes}" excludes="contractmanager/**" update="true">
+            <fileset file="${basedir}/${ant.project.name}_version.txt" />
+            <fileset dir="${basedir}/src/notify" />
+        </jar>
+        
+        <copy file="${product.dir.deployContract}/CM_Config.jar" tofile="${product.dir.deployContract}/CM_Config_${app.build}.jar"/>
+<!--        <copy file="${basedir}/dist/${ant.project.name}.jar" tofile="${product.dir.deployContract}/CM_Config.jar"/>-->
+        <copy file="${basedir}/${ant.project.name}_version.html" tofile="${product.dir.deployContract}/CM_Config_version.html"/>
+        <copy file="${basedir}/${ant.project.name}_version.txt" tofile="${product.dir.deployContract}/CM_Config_version.txt"/>
+        
+                
+        <copy file="${basedir}/dist/${ant.project.name}.jar" tofile="${product.dir.deploy}/${ant.project.name}_${app.build}.jar"/>
+        <copy file="${basedir}/dist/${ant.project.name}.jar" tofile="${product.dir.deploy}/${ant.project.name}.jar"/>                
+        <copy file="${basedir}/${ant.project.name}_version.html" tofile="${product.dir.deploy}/${ant.project.name}_version.html"/>
+        <copy file="${basedir}/${ant.project.name}_version.txt" tofile="${product.dir.deploy}/${ant.project.name}_version.txt"/>
+                
+    </target>
+    
+</project>

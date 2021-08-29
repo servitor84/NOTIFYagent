@@ -1,0 +1,39 @@
+Versionsgeschichte DOKinform ContractManager
+===================================================================
+
+10.0 (build 02950)    27.07.2021    IX and DOKInform for ELO20
+10.0 (build 02948)    06.01.2021    Anpassungen für ELO12
+10.0 (build 02947)    09.10.2019    Ging nicht mit mehreren Profilen. neuer DokInform Jar (Interval) mit ältere Version ersetzt. 
+10.0 (build 02946)    20.12.2018    Änderung des Auslesens der Eigenschaft für die Status. Denn jetzt steht 0 statt Aktiv und 1 statt Beendet und 2 statt Gekündigt
+10.0 (build 02944)    06.12.2018    CM: info in log file added if WF template name does not exist
+10.0 (build 02942)    30.07.2018    Build with changes in DOKInform Library for INTERVAL
+10.0 (build 02939)    21.02.2018    name of CONTRACTmanager in version.properties was incorrect (CONTRACTManager)
+10.0 (build 02937)    08.01.2018    Mode entries fixed (Mode column in the Status site)
+10.0 (build 02936)    29.12.2017    ForwardWFsetUsers-profile - passing workflows by sords
+10.0 (build 02935)    20.12.2017    Konfigurationsfehler behoben - Leerzeichen am Ende von IX URL
+10.0 (build 02822)    24.11.2017    expansion for all nodes with string elo
+10.0 (build 02746)    17.11.2017    xmlVersion variable changed to naVersion
+10.0 (build 02741)    14.11.2017    Location of build files changed - D:\Work\Java\OwnCloud\DOKINFORM\DIST\PRODUCTS -
+10.0 (build 02734)    07.11.2017    classpath changed - D:\NB_Projects\lib\NOTIFYagent\NOTIFYagent
+10.0 (build 02733)    06.11.2017    Test: version files into cloud ordner
+10.0 (build 02711)    02.11.2017    version changed to 10.0
+10.0 (build 02709)    01.11.2017    version changed to 10
+9.0 (build 02706)    01.11.2017    check version
+9.0 (build 02696)    01.11.2017    check version added
+9.0 (build 02664)    24.10.2017    ELOClientNG changed - initialized variable
+9.0 (build 02645)    24.10.2017    arivato.dokinform to di.dokinform
+9.0 (build 02642)    20.10.2017    "arivato" package part to "di"
+9.0.9 (build 02613)    19.10.2017    version format changed
+9.0.9 (build 02593)    19.10.2017    returnvalue of the methos loadsendimmediatelyvalues() changed from string to array - several profiles
+9.0.9 (build 02577)    19.10.2017    SendImmediately in profile file changed
+9.0.9 (build 02572)    19.10.2017    clear one error
+9.0.9 (build 02569)    19.10.2017    Application.java modified -> new build is required for the webservice
+9.0.9 (build 02454)    05.10.2017    Javaclient URL and Webclient URL added
+9.0.9 (build 02452)    04.10.2017    NotifyWorker.java modified - (activeNodes, output of workflows list)
+9.0.9 (build 02128)    13.09.2017    last build
+9.0.9 (build 02127)    12.09.2017    Tabelle erweitert in der status-Seite
+9.0.9 (build 02123)    12.09.2017    Application.java changed for the third column, also the status.jsp file
+9.0.9 (build 02113)    12.09.2017    jars in dist to lib
+9.0.9 (build 02112)    12.09.2017    project name in build.xml and the project folder name changed
+9.0.9 (build 02096)    09.09.2017    product_CONTRACTmanager.properties file chnaged for a correct version
+9.0.9 (build 02091)    08.09.2017    Removed supscriptions

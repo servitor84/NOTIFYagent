@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>ELO Notify Agent</display-name>
+    <description>Starts and stops the service</description>
+    <servlet>
+        <servlet-name>AgentServlet</servlet-name>
+        <servlet-class>de.di.notifyagent.web.AgentServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <displayable-name xml:lang="en">ELO Notify Agent</displayable-name>
+        <displayable-name xml:lang="de">ELO Notify Agent</displayable-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AgentServlet</servlet-name>
+        <url-pattern>/NOTIFYagent</url-pattern>
+    </servlet-mapping>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Protected Area</web-resource-name>
+            <url-pattern>/conf/*</url-pattern>            
+        </web-resource-collection>        
+        <auth-constraint>
+            <role-name>authenticated-user</role-name>
+        </auth-constraint>
+    </security-constraint>
+  
+	
+	<!-- in order to catch the Servlet-Exceptions thrown in the Servlet ServlentAgent -->
+    <!-- todo	
+	<error-page>
+		<exception-type>java.lang.Throwable<exception-type/>
+		<location>/ErrorHandler</location>
+	</error-page>    
+	-->
+	
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

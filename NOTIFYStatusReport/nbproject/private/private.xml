@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group name="UTILS">
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/java/de/arivato/notifyagent/subscription/app/Application.java</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/build.properties</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/build.xml</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/nbproject/build-impl.xml~</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/conf_dist/license.txt</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/conf_dist/config.properties</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/conf/config.properties</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/conf/license.txt</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/java/de/arivato/notifyagent/web/AgentServlet.java</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/java/de/arivato/notifyagent/subscription/validator/NameValidator.java</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/web/WEB-INF/tlds/subscriptiontaglib.tld</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/web/WEB-INF/faces-config.xml</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/contractmanager/index.html</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/contractmanager/lizenz_en.html</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/contractmanager/lizenz.html</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/contractmanager/images/kopf.jpg</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/notifyagent/images/kopf.jpg</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/contractmanager/lizenz.jsp</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/contractmanager/WEB-INF/classes/de/arivato/notifyagent/web/resource/servlet.properties</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/contractmanager/WEB-INF/classes/de/arivato/notifyagent/web/resource/servlet_de.properties</file>
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/web/status.jsp</file>
+        </group>
+        <group name="XMLimporter"/>
+        <group name="MAILsender"/>
+        <group name="NotifyAgent">
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/java/de/arivato/notifyagent/web/AgentServlet.java</file>
+        </group>
+        <group name="ELO">
+            <file>file:/home/stefan/GIT/DOKinform/Projects/NOTIFYagent/NOTIFYStatusReport/src/java/de/arivato/notifyagent/web/AgentServlet.java</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/samir.lebaal/Documents/NetBeansProjects/NotifyAgent/NOTIFYStatusReport/build.properties</file>
+        </group>
+    </open-files>
+</project-private>

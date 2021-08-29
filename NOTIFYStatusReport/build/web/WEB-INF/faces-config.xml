@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="1.2" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+
+    <!-- MANAGED BEANS -->
+    <managed-bean>
+        <description>Bean for keeping track of the user session and login status</description>
+        <managed-bean-name>userSession</managed-bean-name>
+        <managed-bean-class>de.di.notifyagent.subscription.session.UserSession</managed-bean-class>
+    
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+          <property-name>elo</property-name>
+          <value>#{eloBean}</value>
+        </managed-property></managed-bean>
+    <managed-bean>
+        <description>Bean to handle the login process</description>
+        <managed-bean-name>loginForm</managed-bean-name>
+        <managed-bean-class>de.di.notifyagent.subscription.session.LoginForm</managed-bean-class>
+    
+        <managed-bean-scope>request</managed-bean-scope></managed-bean>
+    <managed-bean>
+        <description>Bean to handle the ELO connection</description>
+        <managed-bean-name>eloBean</managed-bean-name>
+        <managed-bean-class>de.di.notifyagent.subscription.session.EloBean</managed-bean-class>
+    
+        <managed-bean-scope>none</managed-bean-scope></managed-bean>
+    <managed-bean>
+        <description>Application bean providing access to the configuration</description>
+        <managed-bean-name>application</managed-bean-name>
+        <managed-bean-class>de.di.notifyagent.subscription.app.Application</managed-bean-class>
+    
+        <managed-bean-scope>application</managed-bean-scope></managed-bean>
+    <managed-bean>
+        <description>Backing bean to manage subscriptions</description>
+        <managed-bean-name>subscriptions</managed-bean-name>
+        <managed-bean-class>de.di.notifyagent.subscription.app.Subscriptions</managed-bean-class>
+    
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+          <property-name>userSession</property-name>
+          <value>#{userSession}</value>
+        </managed-property></managed-bean>
+    <managed-bean>
+        <description>Backing bean for a new subscription</description>
+        <managed-bean-name>newSubscription</managed-bean-name>
+        <managed-bean-class>de.di.notifyagent.subscription.app.NewSubscription</managed-bean-class>
+    
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+          <property-name>userSession</property-name>
+          <value>#{userSession}</value>
+        </managed-property></managed-bean>
+    <managed-bean>
+        <managed-bean-name>editSubscription</managed-bean-name>
+        <managed-bean-class>de.di.notifyagent.subscription.app.EditSubscription</managed-bean-class>
+    
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+          <property-name>userSession</property-name>
+          <value>#{userSession}</value>
+        </managed-property></managed-bean>
+
+    <!-- NAVIGATION RULES -->
+    <!--
+    <navigation-rule>
+      <from-view-id>/subscription/newsubscription.jsp</from-view-id>
+      <navigation-case>
+        <from-outcome>newsubscription</from-outcome>
+        <to-view-id>/subscription/newsubscription.jsp</to-view-id>
+      </navigation-case>
+      <navigation-case>
+        <from-outcome>mysubscriptions</from-outcome>
+        <to-view-id>/subscription/mysubscriptions.jsp</to-view-id>
+      </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+      <from-view-id>/subscription/mysubscriptions.jsp</from-view-id>
+      <navigation-case>
+        <from-outcome>newsubscription</from-outcome>
+        <to-view-id>/subscription/newsubscription.jsp</to-view-id>
+      </navigation-case>
+      <navigation-case>
+        <from-outcome>mysubscriptions</from-outcome>
+        <to-view-id>/subscription/mysubscriptions.jsp</to-view-id>
+      </navigation-case>
+      <navigation-case>
+        <from-outcome>confirmdelete</from-outcome>
+        <to-view-id>/subscription/confirmdelete.jsp</to-view-id>
+      </navigation-case>
+      <navigation-case>
+        <from-outcome>editsubscription</from-outcome>
+        <to-view-id>/subscription/editsubscription.jsp</to-view-id>
+      </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+      <from-view-id>/subscription/confirmdelete.jsp</from-view-id>
+      <navigation-case>
+        <to-view-id>/subscription/mysubscriptions.jsp</to-view-id>
+      </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+      <from-view-id>/subscription/editsubscription.jsp</from-view-id>
+      <navigation-case>
+        <from-outcome>editsubscription</from-outcome>
+        <to-view-id>/subscription/editsubscription.jsp</to-view-id>
+      </navigation-case>
+      <navigation-case>
+        <from-outcome>mysubscriptions</from-outcome>
+        <to-view-id>/subscription/mysubscriptions.jsp</to-view-id>
+      </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+      <from-view-id>/subscription/login.jsp</from-view-id>
+      <navigation-case>
+        <from-outcome>login</from-outcome>
+        <to-view-id>/subscription/login.jsp</to-view-id>
+      </navigation-case>
+      <navigation-case>
+        <from-outcome>mysubscriptions</from-outcome>
+        <to-view-id>/subscription/mysubscriptions.jsp</to-view-id>
+      </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+      <from-view-id>*</from-view-id>
+      <navigation-case>
+        <to-view-id>/subscription/login.jsp</to-view-id>
+      </navigation-case>
+    </navigation-rule>
+    -->
+
+    <!-- Conversters -->
+    <!--
+    <converter>
+      <description>Last run converter for subscription documents</description>
+      <converter-class>de.arivato.notifyagent.subscription.converter.LastRunConverter</converter-class>
+      <converter-id>LastRunConverter</converter-id>
+    </converter>
+    <converter>
+      <description>Status converter for subscription documents</description>
+      <converter-class>de.arivato.notifyagent.subscription.converter.StatusConverter</converter-class>
+      <converter-id>StatusConverter</converter-id>
+    </converter>
+    -->
+
+    <!--Validators-->
+    <!--
+    <validator>
+      <description>Validator for the subscription name</description>
+      <validator-class>de.arivato.notifyagent.subscription.validator.NameValidator</validator-class>
+      <validator-id>NameValidator</validator-id>
+    </validator>
+    -->
+    <!--
+  <component>
+    <component-class>de.arivato.notifyagent.subscription.components.SelectMask</component-class>
+    <component-type>de.arivtao.notifyagent.subscription.SelectMask</component-type>
+  </component>
+  -->
+</faces-config>

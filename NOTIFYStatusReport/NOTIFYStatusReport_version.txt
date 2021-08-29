@@ -1,0 +1,36 @@
+Versionsgeschichte DOKinform NOTIFYStatusReport
+===================================================================
+
+10.0 (build 02823)    24.11.2017    expansion for all nodes with string elo
+10.0 (build 02754)    23.11.2017    build.xml modified for contractmanager
+10.0 (build 02747)    17.11.2017    xmlVersion variable changed to naVersion
+10.0 (build 02743)    16.11.2017    contractmanager (arivato => di) - NOTIFYStatusReport/src/contractmanager
+10.0 (build 02742)    14.11.2017    Location of build files changed - D:\Work\Java\OwnCloud\DOKINFORM\DIST\PRODUCTS -
+10.0 (build 02736)    07.11.2017    classpath changed - D:\NB_Projects\lib\NOTIFYagent\NOTIFYStatusReport
+10.0 (build 02730)    06.11.2017    Test: version files into cloud ordner 
+10.0 (build 02712)    02.11.2017    version changed to 10.0
+10.0 (build 02710)    01.11.2017    version changed to 10
+9.0 (build 02708)    01.11.2017    check version is added
+9.0 (build 02685)    26.10.2017    additional rolename in tomcat-users for conf security - authenticated-user
+9.0 (build 02680)    26.10.2017    extend web.xml 
+9.0 (build 02677)    24.10.2017    DokInform.jar in the library of NSReport saved
+9.0 (build 02666)    24.10.2017    init method from ELOClientNG changed
+9.0 (build 02643)    20.10.2017    "arivato" package namespace to "di" 
+9.0 (build 02631)    20.10.2017    exclude license.txt - 2 try
+9.0 (build 02630)    20.10.2017    license.txt exclude
+9.0.9 (build 02614)    19.10.2017    version format changed
+9.0.9 (build 02606)    19.10.2017    data on status sites restored
+9.0.9 (build 02594)    19.10.2017    status.jsp adjusted since jar changed
+9.0.9 (build 02582)    19.10.2017    Status.jsp modification
+9.0.9 (build 02579)    19.10.2017    status.jsp modified
+9.0.9 (build 02578)    19.10.2017    SendImmediately in profile file in the jar file changed
+9.0.9 (build 02576)    19.10.2017    for a test sendImmediately in profile file changed
+9.0.9 (build 02575)    19.10.2017    clear one more error
+9.0.9 (build 02574)    19.10.2017    clear one code error
+9.0.9 (build 02573)    19.10.2017    clear one error
+9.0.9 (build 02571)    19.10.2017    clear one code error
+9.0.9 (build 02570)    19.10.2017    new build for NOTIFYagent was forgotten
+9.0.9 (build 02568)    19.10.2017    read mode from resource - changed: status.jsp, Application.java, product_NOTIFYagent.properties, servlet_de.properties
+9.0.9 (build 02567)    19.10.2017    -pre-dist in build.xml deletes - problems by testing, license not found 
+9.0.9 (build 02566)    19.10.2017    license.txt not found?
+9.0.9 (build 02565)    18.10.2017    VersionInfo for NOTIFYStatusReport added

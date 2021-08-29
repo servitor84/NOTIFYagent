@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="NOTIFYagent" default="default" basedir=".">
+    <description>Builds, tests, and runs the project Notifyagent.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <property file="build.properties" />
+    
+    <target name="-post-init">
+         
+        <property file="version.properties" />        
+        <propertyfile file="${product.file.version}">
+            <entry key="app.version" value="${application.version.major}.${application.version.minor} (build ${application.version.build})"
+                      default="${application.version.major}.${application.version.minor} (build 01001)"/>
+            <entry key="app.product_name" value="${application.product.name}" />
+            <entry key="app.build" value="${application.version.build}" />
+        </propertyfile>
+        <propertyfile file="${product.file.versionContract}">
+            <entry key="app.version" value="${application.version.major}.${application.version.minor} (build ${application.version.build})"
+                      default="${application.version.major}.${application.version.minor} (build 01001)"/>
+            <entry key="app.product_name" value="${application.product.name_contract}" />
+            <entry key="app.build" value="${application.version.build}" />
+        </propertyfile>
+    </target>
+    
+    <target name="-post-jar">
+        <propertyfile file="version.properties">
+            <entry key="application.version.build" type="int" operation="+" default="01001" pattern="00000"/>
+        </propertyfile>  
+        <property file="${product.file.version}" />
+        <exec executable="${versioninfo.location}">
+            <arg value = "${basedir}"/>
+            <arg value = "${ant.project.name}"/>
+            <arg value = "${app.version}"/>
+        </exec>
+         <exec executable="${versioninfo.location}">
+            <arg value = "${basedir}"/>
+            <arg value = "ContractManager"/>
+            <arg value = "${app.version}"/>
+        </exec>
+        <copy file="${basedir}/dist/NOTIFYagent.jar" tofile="${basedir}/dist/ContractManager.jar"/>
+        <jar destfile="${basedir}/dist/ContractManager.jar" update="true">
+            <fileset file="${basedir}/ContractManager_version.txt">
+            </fileset>
+        </jar>
+        
+        <jar destfile="${basedir}/dist/${ant.project.name}.jar" update="true">
+            <fileset file="${basedir}/${ant.project.name}_version.txt">
+            </fileset>
+        </jar>
+        
+        
+        <copy file="${basedir}/dist/${ant.project.name}.jar" tofile="${product.dir.deploy}/${ant.project.name}_${app.build}.jar"/>
+        <copy file="${basedir}/dist/${ant.project.name}.jar" tofile="${product.dir.deploy}/${ant.project.name}.jar"/>                        
+        <copy file="${basedir}/${ant.project.name}_version.html" tofile="${product.dir.deploy}/${ant.project.name}_version.html"/>
+        <copy file="${basedir}/${ant.project.name}_version.txt" tofile="${product.dir.deploy}/${ant.project.name}_version.txt"/>
+  
+        <copy file="${basedir}/dist/CONTRACTmanager.jar" tofile="${product.dir.deployContract}/CONTRACTmanager_${app.build}.jar"/>
+        <copy file="${basedir}/dist/CONTRACTmanager.jar" tofile="${product.dir.deployContract}/CONTRACTmanager.jar"/>               
+        <copy file="${basedir}/CONTRACTmanager_version.html" tofile="${product.dir.deployContract}/CONTRACTmanager_version.html"/>
+        <copy file="${basedir}/CONTRACTmanager_version.txt" tofile="${product.dir.deployContract}/CONTRACTmanager_version.txt"/> 
+                       
+        <copy file="${basedir}/dist/CONTRACTmanager.jar" tofile="${product.dir.deploy.cm}/CONTRACTmanager.jar"/> 
+    </target>
+    
+    
+</project>

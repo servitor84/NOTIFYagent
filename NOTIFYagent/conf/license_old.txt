@@ -1,0 +1,9 @@
+client=presentation license DE (654) - ELO Digital Office GmbH
+ELO-version=Professional
+ERP-system=MENTION
+license-type=10 profiles (ARIVATO GmbH intern)
+product=DOKinform NOTIFYagent for ELO
+ELO-key=presentation license DE (654) - ELO Digital Office GmbH
+expiration-date=Fri Dec 31 00:00:00 CET 2100
+bytes2=268501c163bf582b489e97af9841f1e277f2e008
+bytes1=b4a0d02919d79533ab01ab8e288a39a5abb89a8e

@@ -1,0 +1,35 @@
+Versionsgeschichte DOKinform NOTIFY_Config
+===================================================================
+
+2.0.0    13.05.2019    all masks can be readed in ELO11 and ELO12
+2.0.0    20.12.2018    Application.InsertJavaclientURL wird auch in Konfig Datei zurück geschrieben
+2.0.0    05.12.2018    resource bundle for contractmanager
+2.0.0    05.12.2018    bundle: for contractmanager was not defined. bundle once for notifyagent and for contractmanager because log.jpg
+2.0.0    04.12.2018    ...
+2.0.0    18.07.2018    Build Proczess verbessert - ordner contractmanager von NOTIFYagent entfernt
+2.0.0    18.07.2018    Title ganz oben in der Fensterleiste verallgemeinert, da er für NOTIFYagent und für CONTRACTmanager sein soll
+2.0.0    18.07.2018    build.xml addition of CM_Config_version.txt
+2.0.0    18.07.2018    Adding properties in resource files (workflows with specified state of the document)
+2.0.0    18.07.2018    Property (Application.InsertJavaclientURL) im Code hinzugefügt. Beim Speichern war noch die falsche drin (InsertDocURL)
+2.0.0    22.02.2018    build process changed
+2.0.0    14.11.2017    Location of build files changed - D:\Work\Java\OwnCloud\DOKINFORM\DIST\PRODUCTS -
+2.0.0    14.11.2017    Location of build files changed - D:\Work\Java\OwnCloud\DOKINFORM\DIST\PRODUCTS -
+2.0.0    07.11.2017    NOTIFY_Config.jar musst be in the classpath otherwise the app can't be launched - ???
+2.0.0    07.11.2017    classpath changed; D:\NB_Projects\lib\NOTIFYagent\NOTIFY_Config
+2.0.0    06.11.2017    Test: update version files in cloud
+2.0.0    30.10.2017    namespace arivato changed
+2.0.0    20.10.2017    arivato namespace by licensecheck changed
+2.0.0    20.10.2017    NOTIFY_Config.jar deleted from the library
+2.0.0    20.10.2017    other sourcebundle changed
+2.0.0    20.10.2017    resourcebundle path modified in (GeneralTab, FilesTab,LicenseTab)
+2.0.0    20.10.2017    resourcebundle file can't be found
+2.0.0    20.10.2017    "arivato"-package-part to "di" refactored
+2.0.0    11.10.2017    change of profile files and notifyuser component - ${basedir}/NotifyUser_de_DE.properties & conf/profiles
+2.0.0    04.10.2017    Dir log path adjusted
+2.0.0    04.10.2017    properties file in Utils.jar changed - testing entry deleted
+2.0.0    04.10.2017    profiles directory added
+2.0.0    04.10.2017    license file added
+2.0.0    04.10.2017    zum Testen conf Ordner in das Projektverzeichnis ertellt
+2.0.0    04.10.2017    RollingFileAppender instead of FileAppender   
+2.0.0    04.10.2017    GeneralTab properties file modified
+    

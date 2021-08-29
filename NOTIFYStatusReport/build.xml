@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="NOTIFYStatusReport" default="default" basedir=".">
+    <description>Builds, tests, and runs the project NOTIFYagent.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <property file="build.properties" />                          
+    
+    <target name="-post-dist">        
+                
+        <basename file="${dist.war}" property="dist.warfile" suffix=".war"/>        
+        <property file="${product.dir.NOTIFYjarProps}"/>
+        
+        <!-- NOTIFYagent Dateien entfernen: /*.html & /*.lizenz.jsp, /conf, /profiles, /images, /WEB-INF/lib/NOTIFYagent.jar, /WEB-INF/classes/*.properties-->
+        <jar destfile="${basedir}/dist/${ant.project.name}.war" basedir="${dir.build.web}" 
+             excludes="**/*.html,**/lizenz.jsp,**/conf/**,**/profiles/**,**/images/**,**/WEB-INF/lib/NOTIFYagent.jar"> <!-- ,**/WEB-INF/classes/** (wird gebraucht als Atribut im Servlet) -->
+            <fileset file="${product.dir.jar}/${product.jar.name}_version.txt" />                                                
+        </jar>                         
+        
+        <!-- CONTRACTmanager Dateien einfügen-->                
+       <jar destfile="${basedir}/dist/${ant.project.name}.war" update="true">  
+           <fileset dir="${basedir}/src/contractmanager" />              
+        </jar>               
+        
+        <!-- CONTRACTmanager WAR in den entsprechenden Ordner kopieren -->
+        <copy file="${product.dir.jar}/CONTRACTManager_version.html" tofile="${product.dir.deployContract}/CONTRACTManager_version.html"/> 
+        <copy file="${product.dir.jar}/CONTRACTManager_version.txt" tofile="${product.dir.deployContract}/CONTRACTManager_version.txt"/>
+        <copy file="${basedir}/dist/${ant.project.name}.war" tofile="${product.dir.deployContract}/CONTRACTmanager.war"/>  
+        <copy file="${basedir}/dist/${ant.project.name}.war" tofile="${product.dir.deployContract}/CONTRACTmanager_${app.build}.war"/>
+        
+        <!-- CONTRACTmanager Dateien entfernen: /*.html & /*.lizenz.jsp, /conf, /profiles, /images -->
+        <delete file="${basedir}/dist/${ant.project.name}.war" />
+        <jar destfile="${basedir}/dist/${ant.project.name}.war" basedir="${dir.build.web}" excludes="**/*.html,**/lizenz.jsp,**/conf/**,**/profiles/**,**/images/**">
+            <fileset file="${product.dir.jar}/${product.jar.name}_version.txt" />
+        </jar>                    
+        
+        <!-- NOTIFYagent Dateien einfügen -->  
+        <jar destfile="${basedir}/dist/${ant.project.name}.war" update="true">
+           <fileset dir="${basedir}/src/notifyagent" />                                
+        </jar> 
+        
+        <!-- NOTIFYagent WAR in den entsprechenden Ordner kopieren -->
+        <copy file="${product.dir.jar}/NotifyAgent_version.html" tofile="${product.dir.deploy}/${product.jar.name}_version.html"/> 
+        <copy file="${product.dir.jar}/NotifyAgent_version.txt" tofile="${product.dir.deploy}/${product.jar.name}_version.txt"/>
+        <copy file="${basedir}/dist/${ant.project.name}.war" tofile="${product.dir.deploy}/${product.jar.name}.war"/>
+        <copy file="${basedir}/dist/${ant.project.name}.war" tofile="${product.dir.deploy}/${product.jar.name}_${app.build}.war"/>
+       
+    </target>
+    
+</project>
